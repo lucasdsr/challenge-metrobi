@@ -3,7 +3,7 @@
 function findDuplicated(items) {
   try {
     if (!items || !items.length)
-      return new Error("[findDuplicated]: Invalid Array");
+      throw new Error("[findDuplicated]: Invalid Array");
 
     const duplicated = items.reduce((acc, itemA) => {
       const amount = items.filter((itemB) => itemB === itemA).length;
@@ -15,7 +15,7 @@ function findDuplicated(items) {
       return acc;
     }, []);
 
-    console.log("duplicated:", duplicated);
+    console.log("Duplicated:", duplicated);
     return duplicated;
   } catch (error) {
     console.error(error);

@@ -4,35 +4,40 @@
   “{([)]}” => false
 */
 
-function verifyBrackets(text) {
-  const openBrackets = ["(", "[", "{"];
-  const closeBrackets = [")", "]", "}"];
+function verifyBrackets(str) {
+  const stack = [];
 
-  const textBrackets = [];
+  const bracketMap = {
+    ")": "(",
+    "}": "{",
+    "]": "[",
+  };
 
-  for (const str of text) {
-    const lastBracket = textBrackets[textBrackets.length - 1];
+  const openingBrackets = new Set(["(", "{", "["]);
 
-    if (openBrackets.includes(str)) {
-      textBrackets.push(str);
-    } else if (closeBrackets.includes(str)) {
-      if (
-        (str === ")" && lastBracket === "(") ||
-        (str === "]" && lastBracket === "[") ||
-        (str === "}" && lastBracket === "{")
-      ) {
-        textBrackets.pop();
-      } else return false;
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (openingBrackets.has(char)) {
+      stack.push(char);
+    } else if (bracketMap[char]) {
+      if (stack.length === 0) {
+        return false;
+      }
+
+      const lastOpenBracket = stack.pop();
+
+      if (lastOpenBracket !== bracketMap[char]) {
+        return false;
+      }
     }
   }
 
-  console.log("textBrackets:", textBrackets);
-
-  return !textBrackets.length;
+  return stack.length === 0;
 }
 
 function main() {
-  const isValid = verifyBrackets("{([)]}");
+  const isValid = verifyBrackets("{()}");
 
   console.log("valid:", isValid);
 }

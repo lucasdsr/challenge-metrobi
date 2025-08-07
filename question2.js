@@ -1,4 +1,9 @@
-// 2) Write an async javascript function that writes every item in any given array with 1, 2, 4, 8, etc., seconds apart.
+/**
+ * Question 2)
+ *
+ * Write an async javascript function that writes every item in any given array with 1, 2, 4, 8, etc., seconds apart.
+ *
+ *  */
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

@@ -1,4 +1,9 @@
-// 1) Write a javascript function that finds the duplicate items in any given array
+/**
+ * Question 1)
+ *
+ * Write a javascript function that finds the duplicate items in any given array
+ *
+ *  */
 
 function findDuplicated(items) {
   try {

@@ -13,7 +13,7 @@
 }
 
 .seccond_row {
-  flex-grow: 6;
+  flex-grow: 10;
   gap: 6px;
 
   .left_column {
@@ -38,7 +38,7 @@
     gap: 6px;
 
     .main {
-      flex-grow: 4;
+      flex-grow: 6;
       background-color: aquamarine;
 
       .main_content {

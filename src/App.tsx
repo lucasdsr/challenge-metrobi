@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Column, Row } from "./components";
 
-function App() {
-  const [count, setCount] = useState(0)
+import styles from "./App.module.css";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => (
+  <Column className={styles.container}>
+    <Row className={styles.header}>
+      <h1>Header</h1>
+    </Row>
+    <Row className={styles.seccond_row}>
+      <Column className={styles.left_column}>
+        <Row className={styles.hero}>
+          <h1>Hero</h1>
+        </Row>
+        <Row className={styles.sidebar}>
+          <h1>Sidebar</h1>
+        </Row>
+      </Column>
+      <Column className={styles.right_column}>
+        <Row className={styles.main}>
+          <Column className={styles.main_content}>
+            <h1>Main Content</h1>
+            <h2>
+              **If things do not look right, make sure your bColumnser is in
+              "Experimental mode"**
+            </h2>
+          </Column>
+        </Row>
+        <Row className={styles.extra}>
+          <h1>Extra Content</h1>
+        </Row>
+      </Column>
+    </Row>
+    <Row className={styles.third_row}>
+      <Column className={styles.related_images}>
+        <h1>Related Images</h1>
+      </Column>
+      <Column className={styles.related_posts}>
+        <h1>Related Posts</h1>
+      </Column>
+    </Row>
+    <Row className={styles.footer}>
+      <h1>Footer</h1>
+    </Row>
+  </Column>
+);
 
-export default App
+export default App;

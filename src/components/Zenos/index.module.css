@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.canvas {
+  margin-bottom: 1.5rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  width: 100%;
+  max-width: 900px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+  }
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition-property: background-color;
+  transition-duration: 300ms;
+  border: none;
+  cursor: pointer;
+}
+
+.startButton {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.startButton:hover {
+  background-color: #1e40af;
+}
+
+.startButtonDisabled {
+  background-color: #9ca3af;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.resetButton {
+  background-color: #1e40af;
+  color: #fff;
+}
+
+.resetButton:hover {
+  background-color: #6b7280;
+}
+
+.info {
+  text-align: center;
+  color: #374151;
+}
+
+@media (min-width: 768px) {
+  .info {
+    text-align: left;
+  }
+}
+
+.infoText {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.infoTextSmall {
+  font-size: 0.875rem;
+}
+
+.messageBox {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  color: #374151;
+}
+
+.messageText {
+  font-size: 0.875rem;
+  font-style: italic;
+}
